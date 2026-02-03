@@ -72,7 +72,9 @@ header input{
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 10px #00000015;
-    display: initial;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
 }
 
 
@@ -85,17 +87,25 @@ header input{
     margin-bottom: 16px;
 }
 
-#tarefas ul li .actions{
+#tarefas ul li .icons{
     display: flex;
-    justify-content: flex-end;
-    margin-top: 16px;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+#tarefas ul li .lixeira, ul li .lapis{
     cursor: pointer;
     fill: #999;
     transition-duration: 200ms;
-
 }
 
-#tarefas ul li .actions:hover{
+#tarefas ul li .lixeira:hover{
+    fill:hsl(0, 95%, 40%);
+    scale: 1.3;
+    transform: translate(-11%, 0) ;
+}
+
+#tarefas ul li .lapis:hover{
     fill:hsl(130 100 20 / 1 );
     scale: 1.3;
     transform: translate(-11%, 0) ;
